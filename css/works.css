@@ -1,0 +1,123 @@
+/**
+ * Базовые стили для всего сайта
+ */
+body {
+	position: relative;
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 16px;
+	line-height: 1.4;
+	color: #fff;
+	min-width: 320px;
+	overflow-x: hidden;
+	height: auto;
+  background-color: #464544;
+ 
+}
+	
+
+header {
+background-color: #0A0A0A;
+
+}
+
+.container{
+	max-width: 1030px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+}
+.navbar{
+width: 100%;
+height: 80px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+
+}
+
+.navbar .container{
+height: inherit;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.navbar-menu {
+	list-style-type: none;
+	padding-left: 0;
+	margin-bottom: 0;
+}
+
+.navbar-menu li {
+	display: inline-block;
+}
+
+.navbar-menu li a {
+	display: inline-block;
+	color: #72525Cs;
+	opacity: 0.6;
+	text-decoration: none;
+	padding: 10px;
+	transition: all .15s ease-in-out;
+}
+
+.navbar-menu li a:hover {
+	opacity: 1;
+}
+
+.navbar-wrap {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.callback {
+	margin-left: 30px;
+	padding: 10px 30px;
+	background-color: coral;
+    border-radius: 100px;
+    color: #fff;
+    text-decoration: none;
+    transition: all .1s ease-out;
+}
+
+.callback:hover {
+	transform: scale(1.04);
+	color: #fff;
+}
+
+
+.navbar-brand {
+	font-weight: 700;
+	font-size: 26px;
+	text-decoration: none;
+    color: #000;
+    transition: all .15s ease-in-out;
+}
+
+.navbar-brand:hover {
+	color: coral;
+}
+
+
+
+
+.left {
+   margin-top: 100px;
+	margin-left: 100px;
+	padding:  0 50px 30px 0;
+}
+.txt {
+	padding:  0 150px 30px 0;
+}
+
+.footer{
+	text-align: center;
+	vertical-align: middle;
+}
+
+
+.footer__email{
+margin-top: 60px;
+font-size: 20px;
+text-decoration: none;
+color: #2f8bc5;
+margin-bottom: 50px;
+}
