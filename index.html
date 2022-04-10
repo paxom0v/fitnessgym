@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GYMmy Neutron</title>
+
+	<!-- Bootstrap reboot (для сброса стилей) -->
+	<link rel="stylesheet" href="libs/bootstrap-reboot.min.css">
+
+	<!-- Bootstrap сетка -->
+	<link rel="stylesheet" href="libs/bootstrap-grid.min.css">
+
+	<!-- Шрифты с Google Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+	<!-- Стили сайта -->
+	<link rel="stylesheet" href="css/styles.css">
+
+
+
+
+</head>
+<body>
+ 
+     <header>
+    <nav class="navbar">
+      <div class="container">
+        <a href="#" class="navbar-brand">
+        	<img src="rar.png" width="90" height="50">
+        </a>
+        <div class="navbar-wrap">
+          <ul class="navbar-menu">
+             <li><a href="#usl" class="smoothScroll">Услуги</a></li>
+             
+             <li><a href="#tre" class="smoothScroll">Тренеры</a></li> 
+    	</ul>
+
+             <a href="tel:+79833210555" class="callback">Обратный звонок</a>
+          </div>
+       </div>
+     </nav>
+</header>
+<section id="home">
+<p>
+<div class="user">
+<img src="img/kek.jpg" width="100%" height="1142">
+<div class="centered">
+
+<h1>Спортзал GYMmy Neutron</h1>
+<h2> <pre>
+Фитнес-клуб GYMmy Neutron — это комфортный тренажерный зал с европейским оборудованием последнего поколения,
+большой выбор групповых программ для взрослых и детей и квалифицированный тренерский состав.
+Мы делаем качественный фитнес доступным для всех, потому что хотим,
+чтобы каждый мог заниматься спортом и становиться здоровее с каждым днем.
+cтановитесь лучшей версией себя вместе с GYMmy Neutron!</pre></h2>
+</div>
+</div>
+</p>
+</section>
+
+<section id="usl">
+<p> <div class="user">
+	<b><pre>
+Услуги 
+</pre></b>
+</div>
+<div class="slideshow-container">
+
+  <div class="mySlides1">
+
+    <img src="img/swim.jpg" style="width:100%">
+    <div class="text">Бассейн</div>
+  </div>
+
+  <div class="mySlides1">
+    <img src="img/kac.jpg" style="width:100%">
+    <div class="text">Тренажерный зал</div>
+  </div>
+
+  <div class="mySlides1">
+    <img src="img/zal.jpg" style="width:100%">
+    <div class="text">Игровой зал</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 0)">❮</a>
+  <a class="next" onclick="plusSlides(1, 0)">❯</a>
+</div> </p>
+</section>
+
+<section id="tre">
+<p>
+	<div class="user">
+	<b><pre>
+Тренеры 
+</pre></b>
+</div>
+	<div class="slideshow-container">
+
+  <div class="mySlides2">
+
+    <img src="img/mark.jpg" style="width:100%">
+    <div class="text">Марк</div>
+ </div>
+  <div class="mySlides2">
+    <img src="img/skala.jpg" style="width:100%">
+     <div class="text">Дуэйн</div>
+  </div>
+
+  <div class="mySlides2">
+    <img src="img/sam.jpg" style="width:100%">
+     <div class="text">Энтони</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 1)">❮</a>
+  <a class="next" onclick="plusSlides(1, 1)">❯</a>
+</div>
+</p> </section>
+
+<script>
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
+</script>
+<footer>
+    <div class="waves">
+        <div class="wave" id="wave1"></div>
+    </div>
+    <ul class="social">
+        <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-linkedin"><ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+    </ul>
+    <ul class="menu">
+        <li><a href="#home">О нас</a></li>
+        <li><a href="#usl">Услуги</a></li>
+        <li><a href="#tre">Тренеры</a></li>
+        
+    </ul>
+    <p>©2022 FItness | GYMmy Neutron</p>
+</footer>
+//Готовые иконки из библиотеки ionicons
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
