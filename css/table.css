@@ -17,7 +17,7 @@ body {
 
 header {
 background-color: #fff;
-
+margin-bottom: 20px;
 }
 
 section {
@@ -95,24 +95,24 @@ align-items: center;
  }
 
 
-
-.salemod {
-color: white;
-text-align: center;
-position: relative;
-margin-top: 25px;
-font-size: 50px;
+h1 {
+	text-align: center;
+	font-size: 20px;
+	
 }
+
 
 
 table{
 	text-align:left ;
 	border-collapse: separate;
 	border-spacing: 5px;
-	background: #ece9e0;
+	background: #3586ff;
 	color: #000;
-	border: 16px solid #ece9e0;
+	border: 16px solid #fff;
 	border-radius: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 th{
@@ -121,14 +121,19 @@ th{
 }
 
 td{
-	background: #f5d7bf;
+	background: #fff;
 	padding: 10px;
 }
 
 
 
 
- @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 *{
     margin: 0;/*обнуление отступов*/
     padding: 0;/*обнуление полей*/
@@ -198,6 +203,18 @@ footer p {
     margin-top: 15px;
     font-size: 1.1em;
 }    
+
+
+
+@media only screen and (max-width: 990px){
+ .pricingTable{ margin-bottom: 30px; }
+}
+
+
+
+
+
+
 
 
 
