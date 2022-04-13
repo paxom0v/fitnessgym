@@ -18,7 +18,7 @@
 	<!-- Стили сайта -->
 	<link rel="stylesheet" href="css/styles.css">
 
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 
 
 </head>
@@ -32,113 +32,179 @@
         </a>
         <div class="navbar-wrap">
           <ul class="navbar-menu">
-             <li><a href="#usl" class="smoothScroll">Услуги</a></li>
+             <li><a href="#sale" class="smoothScroll">Акции</a></li>
              
-             <li><a href="#tre" class="smoothScroll">Тренеры</a></li> 
-    	</ul>
-
+             <li><a href="#tre" class="smoothScroll">Тренеры</a></li>  
+    	   
+             <li><a href="#otz" class="smoothScroll">Отзывы</a></li>  
+              <li><a href="works.html">Видео</a></li>
+              <li><a href="table.html">Прайс</a></li>
+    	   </ul>
              <a href="tel:+79833210555" class="callback">Обратный звонок</a>
           </div>
        </div>
      </nav>
-</header>
-<section id="home">
-<p>
-<div class="user">
-<img src="img/kek.jpg" width="100%" height="1142">
-<div class="centered">
+  </header>
+  <main>
+ <section id="home">
+    <p>
+      <div class="user">
+      <img src="img/kek.jpg" width="100%" height="1142">
+      <div class="centered">
 
-<h1>Спортзал GYMmy Neutron</h1>
+      <h1>Спортзал GYMmy Neutron</h1>
 <h2> <pre>
 Фитнес-клуб GYMmy Neutron — это комфортный тренажерный зал с европейским оборудованием последнего поколения,
 большой выбор групповых программ для взрослых и детей и квалифицированный тренерский состав.
 Мы делаем качественный фитнес доступным для всех, потому что хотим,
 чтобы каждый мог заниматься спортом и становиться здоровее с каждым днем.
 cтановитесь лучшей версией себя вместе с GYMmy Neutron!</pre></h2>
-</div>
-</div>
+         </div>
+    </div>
 </p>
+  <section id="sale">
+  	<div class="salemod">
+	<b><pre>
+АКЦИИ НА СПОРТ
+</pre></b>
+      <img src="img/sale.jpg" width="100%" height="400">
+
+</div>
 </section>
 
-<section id="usl">
-<p> <div class="user">
-	<b><pre>
-Услуги 
+<section id="tre">
+<div class="salemod">
+<b><pre>
+ТРЕНЕРЫ
 </pre></b>
 </div>
 <div class="slideshow-container">
 
-  <div class="mySlides1">
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="img/mark.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
 
-    <img src="img/swim.jpg" style="width:100%">
-    <div class="text">Бассейн</div>
-  </div>
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="img/skala.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
 
-  <div class="mySlides1">
-    <img src="img/kac.jpg" style="width:100%">
-    <div class="text">Тренажерный зал</div>
-  </div>
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="img/sam.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
 
-  <div class="mySlides1">
-    <img src="img/zal.jpg" style="width:100%">
-    <div class="text">Игровой зал</div>
-  </div>
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
 
-  <a class="prev" onclick="plusSlides(-1, 0)">❮</a>
-  <a class="next" onclick="plusSlides(1, 0)">❯</a>
-</div> </p>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
 </section>
 
-<section id="tre">
-<p>
-	<div class="user">
-	<b><pre>
-Тренеры 
-</pre></b>
-</div>
-	<div class="slideshow-container">
-
-  <div class="mySlides2">
-
-    <img src="img/mark.jpg" style="width:100%">
-    <div class="text">Марк</div>
- </div>
-  <div class="mySlides2">
-    <img src="img/skala.jpg" style="width:100%">
-     <div class="text">Дуэйн</div>
-  </div>
-
-  <div class="mySlides2">
-    <img src="img/sam.jpg" style="width:100%">
-     <div class="text">Энтони</div>
-  </div>
-
-  <a class="prev" onclick="plusSlides(-1, 1)">❮</a>
-  <a class="next" onclick="plusSlides(1, 1)">❯</a>
-</div>
-</p> </section>
-
 <script>
-var slideIndex = [1,1];
-var slideId = ["mySlides1", "mySlides2"]
-showSlides(1, 0);
-showSlides(1, 1);
+var slideIndex = 1;
+showSlides(slideIndex);
 
-function plusSlides(n, no) {
-  showSlides(slideIndex[no] += n, no);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-function showSlides(n, no) {
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
   var i;
-  var x = document.getElementsByClassName(slideId[no]);
-  if (n > x.length) {slideIndex[no] = 1}    
-  if (n < 1) {slideIndex[no] = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
   }
-  x[slideIndex[no]-1].style.display = "block";  
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
 }
 </script>
+
+
+
+
+
+
+
+  <section id="otz">
+<div class="koguvcavis-varazdel">
+  <div class="sestim-donials">
+  <h1>Отзывы</h1>
+  <div class="sectionesag"></div>
+  <div class="sagestim-lonials">
+  <div class="vemotau-vokusipol">
+  <div class="testimonial">
+  <img src="http://zornet.ru/_fr/83/7890600.jpg" alt="">
+  <div class="gecedanam">Антон Попов</div>
+  <div class="apogered-gselected">
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  </div>
+
+  <p>Занимаюсь с тренером. Все нравится.</p>
+  </div>
+  </div>
+
+  <div class="vemotau-vokusipol">
+  <div class="testimonial">
+  <img src="http://zornet.ru/_fr/83/2047084.jpg" alt="">
+  <div class="gecedanam">Дмитрий Атрохов</div>
+  <div class="apogered-gselected">
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="far fa-star"></i>
+  </div>
+
+  <p>Попробовал много залов, но этот оказался лучшим.</p>
+  </div>
+  </div>
+
+  <div class="vemotau-vokusipol">
+  <div class="testimonial">
+  <img src="http://zornet.ru/_fr/83/5640570.jpg" alt="">
+  <div class="gecedanam">Каспер Волков</div>
+  <div class="apogered-gselected">
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="far fa-star"></i>
+  </div>
+
+  <p>Лучшие возможности для улучшения себя.
+  </p>
+  </div>
+  </div>
+  </div>
+  </section>
+
+</main>
+
 <footer>
     <div class="waves">
         <div class="wave" id="wave1"></div>
@@ -157,7 +223,6 @@ function showSlides(n, no) {
     </ul>
     <p>©2022 FItness | GYMmy Neutron</p>
 </footer>
-//Готовые иконки из библиотеки ionicons
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
